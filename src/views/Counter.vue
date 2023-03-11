@@ -1,9 +1,11 @@
 <template>
   <section>
     <div class="counter">
-        <h1>Counter: {{ counter }}</h1>
-        <button class="btn" @click="increament">Increasement</button>
-        <button @click="decreament">Decrement</button>
+        <h1 class="header">Counter: {{ counter }}</h1>
+        <div class="button">
+          <button class="btn" @click="increament">Increasement</button>
+        <button class="btn" @click="decreament">Decrement</button>
+        </div>
         <button @click="reset">Reset</button>
     </div>
   </section>
@@ -45,14 +47,30 @@ section{
   height: 100vh;
   width: 100%;
   .counter{
-  position: relative;
-    padding: 30px;
-    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 206px;
+    margin: 161px 553px;
+    @media (max-width: 1450px) {
+  
+        padding: 0;
+        margin: auto;
+        overflow: hidden;
+      }
   }
   h1{
     color: #fff;
-    
-
   }
+.button{
+  display: block;
+}
+.btn{
+  width: 102px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 11px;
+}
 }
 </style>
