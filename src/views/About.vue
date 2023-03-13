@@ -3,13 +3,24 @@
     <section class="about">
       <div class="about-text container">
         <h2 class="header">About Me</h2>
-        <h4>Nmeregini Johnhenry</h4>
+        <h4><span>N</span>meregini <span>J</span>ohnhenry</h4>
         <hr />
         <h2>
           FRONT-END <br />
           DEVELOPER
         </h2>
         <hr />
+        <div class="hero"> 
+          <h2>Contact Me</h2>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/johnhenry-chibueze-b01ba41b3/"><i class="fa-brands fa-linkedin"></i></a>
+         <a href=""><i class="fa-brands fa-instagram"></i></a>
+         <a href=""><i class="fa-brands fa-twitter"></i></a>
+         <a href=""><i class="fa-brands fa-github"></i></a>
+          </div>
+  
+        </div>
+      
       </div>
     </section>
   </div>
@@ -25,6 +36,7 @@ name: 'About',
 </script>
 
 <style lang="scss" scoped>
+
 .about {
   background-image: url("../assets/hero-bg.png");
   background-attachment: fixed;
@@ -42,6 +54,11 @@ name: 'About',
     flex-direction: column;
     justify-content: center;
     color: #fff;
+  
+    span{
+      color: #00afea;
+      transform: translateX(-180deg);
+    }
     h4 {
       text-transform: uppercase;
       font-size: 22px;
@@ -49,8 +66,8 @@ name: 'About',
     }
     h2 {
       font-size: 50px;
-      @media (min-width: 550px) {
-        font-size: 80px;
+      @media (max-width: 1450px) { 
+        font-size: 40px;
       }
     }
     hr:nth-child(2) {
@@ -65,5 +82,41 @@ name: 'About',
       margin-top: 16px;
     }
   }
+  .hero{
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .social-links{
+    display: flex;
+   
+  }
+    a{
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      text-decoration: none;
+      color: #000;
+      box-shadow: 0 0 20px 10px rgba(0,0,0,0.05);
+      margin: 0 30px;
+      border-radius: 50%;
+      position: relative;
+    }
+  .fa-brands{
+      font-size: 30px;
+      line-height: 80px;
+
+      .fa-brands::after{
+        content: '';
+        top: -90px;
+        left: 0;
+        background: linear-gradient(-45deg, #ed1c94, #ffec17);
+        position: absolute;
+      }
+    }
+    
+  
 }
 </style>
